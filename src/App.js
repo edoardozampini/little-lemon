@@ -1,31 +1,24 @@
 import './App.css';
-import Header from './Header.js';
-import Nav from './Nav.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
+import Nav from './components/Nav.js';
+import Main from './components/Main.js';
+import Footer from './components/Footer.js';
+import { BrowserRouter } from 'react-router-dom';
+import Menu from './components/Menu.js';
+import Testimonials from './components/Testimonials.js';
+import About from './components/About.js';
+
 
 function App() {
   return (
     <>
-      <Header />
       <Nav />
-      <img src="https://www.littlelemon.com/logo.png" alt="Little Lemon Logo" />
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Menu</li>
-        <li>Reservations</li>
-        <li>Order Online</li>
-        <li>Login</li>
-      </ul>
-      <Main />
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
+      <Menu />
+      <Testimonials />
+      <About />
       <Footer />
-      <img src="https://www.littlelemon.com/logo.png" alt="Little Lemon Logo" />
-      <ul>
-        <li>Contact</li>
-        <li>Doormat Navigation</li>
-        <li>Social Links</li>
-      </ul>
     </>
 
   );
